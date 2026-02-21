@@ -1,13 +1,11 @@
 # See docs at: https://mystmd.org/guide/frontmatter
 version: 1
 project:
-  id: 86305a93-14d2-44df-afb8-87b54ed3facd
-  # title:
-  # description:
-  # keywords: []
-  # authors: []
-  # github:
-  # To autogenerate a Table of Contents, run "jupyter book init --write-toc"
+  toc:
+    - file: index.md
+    - title: Información general
+      children:
+        - file: contenidos/informacion-general/programa.md
 site:
   template: book-theme
   # options:
