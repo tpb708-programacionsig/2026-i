@@ -3,9 +3,19 @@ version: 1
 project:
   toc:
     - file: index.md
-    - title: Información general
+    - title: INFORMACIÓN GENERAL
       children:
         - file: contenidos/informacion-general/programa.md
+    - title: "I. INTRODUCCIÓN A LA PROGRAMACIÓN DE COMPUTADORAS Y A LA CIENCIA DE DATOS"
+      children:
+        - title: Introducción a la ciencia de datos
+          url: https://colab.research.google.com/drive/1G2DFQq4SyzG7-DZ9l5TIJV-M0_Nb1o4O?usp=sharing
+        - title: Cuadernos de notas Jupyter
+          url: https://colab.research.google.com/drive/1KtO79pmNKzkhRdqCOeiQ7y1tn8JYLWu5?usp=sharing
+        - title: El lenguaje de marcado Markdown
+          url: https://colab.research.google.com/drive/1EflT3tX6r-UInFs4PevO0QjOksmsY91d?usp=sharing
+        - title: Representación de datos
+          url: https://colab.research.google.com/drive/14BLxTBly67HoDEgfPFjxpQWiLFNZCGBM?usp=sharing
 site:
   template: book-theme
   # options:
