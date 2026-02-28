@@ -13,6 +13,10 @@ project:
         - file: contenidos/i-introduccion-ciencia-datos-programacion/03-markdown.md
         - file: contenidos/i-introduccion-ciencia-datos-programacion/04-representacion-datos.md
         - file: contenidos/i-introduccion-ciencia-datos-programacion/05-introduccion-programacion-computadoras.md
+    - title: Software
+      children:
+        - file: contenidos/software/vscode.md
+        - file: contenidos/software/miniconda.md
 site:
   template: book-theme
   # options:
