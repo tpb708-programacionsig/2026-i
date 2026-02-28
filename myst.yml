@@ -12,6 +12,7 @@ project:
         - file: contenidos/i-introduccion-ciencia-datos-programacion/02-jupyter.md
         - file: contenidos/i-introduccion-ciencia-datos-programacion/03-markdown.md
         - file: contenidos/i-introduccion-ciencia-datos-programacion/04-representacion-datos.md
+        - file: contenidos/i-introduccion-ciencia-datos-programacion/05-introduccion-programacion-computadoras.md
 site:
   template: book-theme
   # options:
