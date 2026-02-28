@@ -1,4 +1,4 @@
-# TPB708 - Programación SIG - 2026-i
+# TPB708 - Programación en SIG - 2026-i
 
 Este curso trata sobre el manejo, visualización y análisis de datos geoespaciales mediante el lenguaje de programación Python. Se estudian los fundamentos de Python, sus bibliotecas geoespaciales y su empleo en el desarrollo de aplicaciones, tanto de escritorio como para la Web. Se demuestra como metodologías y técnicas de ciencia de datos pueden ser aplicadas al componente geográfico de diversos problemas.
 
