@@ -1,6 +1,6 @@
-# TPB708 - Programación SIG - 2026-I
+# TPB708 - Programación en SIG - 2026-I
 
-Sitio web del curso TPB708 Programación de Sistemas de Información Geográfica, de la Maestría en Sistemas de Información Geográfica y Teledetección de la Universidad Nacional y la Universidad de Costa Rica.
+Sitio web del curso TPB708 Programación en Sistemas de Información Geográfica (SIG), de la [Maestría en Sistemas de Información Geográfica y Teledetección de la Universidad Nacional y la Universidad de Costa Rica](https://www.carreras.una.ac.cr/maestria-en-sistemas-de-informacion-geografica-y-teledeteccion/).
 
 ## Enlace al sitio web
 
