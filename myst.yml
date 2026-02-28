@@ -10,10 +10,8 @@ project:
       children:
         - file: contenidos/i-introduccion-ciencia-datos-programacion/01-introduccion-ciencia-datos.md
         - file: contenidos/i-introduccion-ciencia-datos-programacion/02-jupyter.md
-        - title: El lenguaje de marcado Markdown
-          url: https://colab.research.google.com/drive/1EflT3tX6r-UInFs4PevO0QjOksmsY91d?usp=sharing
-        - title: Representación de datos
-          url: https://colab.research.google.com/drive/14BLxTBly67HoDEgfPFjxpQWiLFNZCGBM?usp=sharing
+        - file: contenidos/i-introduccion-ciencia-datos-programacion/03-markdown.md
+        - file: contenidos/i-introduccion-ciencia-datos-programacion/04-representacion-datos.md
 site:
   template: book-theme
   # options:
