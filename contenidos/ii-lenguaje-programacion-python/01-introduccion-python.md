@@ -1,4 +1,4 @@
-# Introducción al lenguaje de programación Python
+# Introducción a Python
 
 ## Trabajo previo
 
