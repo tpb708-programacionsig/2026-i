@@ -13,6 +13,9 @@ project:
         - file: contenidos/i-introduccion-ciencia-datos-programacion/03-markdown.md
         - file: contenidos/i-introduccion-ciencia-datos-programacion/04-representacion-datos.md
         - file: contenidos/i-introduccion-ciencia-datos-programacion/05-introduccion-programacion-computadoras.md
+    - title: "II. El lenguaje de programación Python"
+      children:
+        - file: contenidos/ii-lenguaje-programacion-python/01-introduccion-python.md
     - title: Software
       children:
         - file: contenidos/software/vscode.md
