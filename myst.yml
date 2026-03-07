@@ -16,6 +16,7 @@ project:
     - title: "II. El lenguaje de programación Python"
       children:
         - file: contenidos/ii-lenguaje-programacion-python/01-introduccion-python.md
+        - file: contenidos/ii-lenguaje-programacion-python/02-lenguaje-python.ipynb
     - title: Software
       children:
         - file: contenidos/software/vscode.md
