@@ -13,11 +13,11 @@ Downey, Allen B. (2024). *Think Python: How to Think Like a Computer Scientist* 
 
 [Python](https://www.python.org/) es un lenguaje de programación de propósito general que ha alcanzado una gran popularidad en los últimos años. Fue declarado el lenguaje del año en 2024 por el índice [Tiobe](https://www.tiobe.com/tiobe-index/) de popularidad de lenguajes de programación, debido a su crecimiento en diversas áreas, entre las que destacan la ciencia de datos y el aprendizaje automático, además de desarrollo web, _scripting_ y visualización de datos, entre muchas otras.
 
-Python también es ampliamente utilizado en enseñanza de la programación. En 2014, era el [lenguaje más empleado en cursos introductorios de programación de las principales universidades de Estados Unidos](https://cacm.acm.org/blogs/blog-cacm/176450-python-is-now-the-most-popular-introductory-teaching-language-at-top-u-s-universities/fulltext). Este uso en enseñanza se debe, entre otras razones, a que los programas en Python son más fáciles de leer y requieren menos líneas de código fuente que otros lenguajes de amplia difusión, tales como Java, C o C++.
+Python también es ampliamente utilizado en enseñanza de la programación. En 2014, era el [lenguaje más empleado en cursos introductorios de programación de las principales universidades de Estados Unidos](https://cacm.acm.org/blogcacm/python-is-now-the-most-popular-introductory-teaching-language-at-top-u-s-universities/). Este uso en enseñanza se debe, entre otras razones, a que los programas en Python son más fáciles de leer y requieren menos líneas de código fuente que otros lenguajes de amplia difusión, tales como Java, C o C++.
 
 ## Historia
 
-Python fue creado por el programador holandés [Guido van Rossum](https://gvanrossum.github.io/), quien concibió el diseño original del lenguaje a finales de la década de 1980 y dio a conocer la primera versión en 1991. El nombre del lenguaje es un homenaje al grupo de comedia británico [Monty Python](https://es.wikipedia.org/wiki/Monty_Python). [Según van Rossum](https://www.python.org/doc/essays/foreword/), en diciembre de 1989 buscaba un proyecto de programación como "pasatiempo" durante los días cercanos a la navidad, por lo que decidió escribir un interpretador para un lenguaje de programación en el que había estado pensando recientemente. Escogió el nombre Python por encontrarse en un "humor ligeramente irreverente" y ser un gran aficionado al programa de televisión ["El circo volador de Monty Python" (_Monty Python's Flying Circus_)](https://es.wikipedia.org/wiki/Monty_Python%27s_Flying_Circus) (figura 1).
+Python fue creado por el programador holandés [Guido van Rossum](https://gvanrossum.github.io/), quien concibió el diseño original del lenguaje a finales de la década de 1980 y dio a conocer la primera versión en 1991. El nombre del lenguaje es un homenaje al grupo de comedia británico [Monty Python](https://es.wikipedia.org/wiki/Monty_Python). [Según van Rossum](https://www.python.org/doc/essays/foreword/), en diciembre de 1989 buscaba un proyecto de programación como "pasatiempo" durante los días cercanos a la Navidad, por lo que decidió escribir un interpretador para un lenguaje de programación en el que había estado pensando recientemente. Escogió el nombre Python por encontrarse en un "humor ligeramente irreverente" y ser un gran aficionado al programa de televisión ["El circo volador de Monty Python" (_Monty Python's Flying Circus_)](https://es.wikipedia.org/wiki/Monty_Python%27s_Flying_Circus) (figura 1).
 
 <figure style="text-align: center;">
   <img
@@ -26,6 +26,8 @@ Python fue creado por el programador holandés [Guido van Rossum](https://gvanro
   >
   <figcaption><strong>Figura 1</strong>. El circo volador de Monty Python. Fuente: <a href="https://www.imdb.com/title/tt0063929/">Internet Movie Database (IMDB)</a>.</figcaption>
 </figure>
+
+La versión 3.0 de Python fue publicada en 2008 e introdujo cambios importantes que la hicieron incompatible con Python 2. Ambas versiones coexistieron durante más de una década, hasta que Python 2 alcanzó su [fin de vida](https://www.python.org/doc/sunset-python-2/) en enero de 2020. La versión estable más reciente es Python 3.14.
 
 La "cultura" de Python ocasionalmente hace referencia a Monty Python en tutoriales, ejemplos y otros materiales. Por ejemplo, en el [uso de _spam_, _ham_ y _eggs_ como variables metasintéticas](https://en.wikipedia.org/wiki/Metasyntactic_variable) en sustitución de las tradicionales [_foo_, _bar_ y _baz_](https://en.wikipedia.org/wiki/Foobar), en alusión al _sketch_ [Spam](https://www.youtube.com/watch?v=_bW4vEo1F4E).
 
@@ -46,11 +48,11 @@ Las siguientes son otras características importantes del lenguaje Python:
 
 ### El Zen de Python
 
-La filosofía de diseño de Python está resumida en una lista de 19 principios conocida como el [Zen de Python](https://www.python.org/dev/peps/pep-0020/) que guían el uso del lenguaje.
+La filosofía de diseño de Python está resumida en una lista de 19 principios conocida como el [Zen de Python](https://peps.python.org/pep-0020/) que guían el uso del lenguaje.
 
 ### Guía de estilo para código Python
 
-Los principios de diseño se reflejan en la [guía de estilo para código Python](https://www.python.org/dev/peps/pep-0008/), la cual proporciona una serie de convenciones para la escritura de programas.
+Los principios de diseño se reflejan en la [guía de estilo para código Python](https://peps.python.org/pep-0008/), la cual proporciona una serie de convenciones para la escritura de programas.
 
 ### Programas "pitónicos"
 
@@ -64,7 +66,7 @@ La implementación de referencia del interpretador de Python, llamada [CPython](
 
 ## Aplicación en datos geoespaciales
 
-Python ha ganado una gran importancia en el área del desarrollo de aplicaciones geoespaciales debido a su popularidad, "suavidad" de la curva de aprendizaje y abundancia de recursos de educación y consulta (ej. tutoriales, libros, listas de correo, foros de discusión). Todas estas son características que, entre otras, lo hacen muy apropiado para programadores que no son especialistas en ciencias de la computación, como es el caso de muchos de los usuarios de [sistemas de información geográfica (SIG)](https://es.wikipedia.org/wiki/Sistema_de_informaci%C3%B3n_geogr%C3%A1fica) y otros tipos de software geoespacial. De hecho, muchas de estas herramientas han seleccionado a [Python como el lenguaje de preferencia para que sus usuarios amplíen o configuren la funcionalidad que ofrecen](https://www.mdpi.com/2220-9964/2/1/201). Como ejemplos, pueden mencionarse las bibliotecas [ArcPy](http://desktop.arcgis.com/en/arcmap/10.3/analyze/arcpy/what-is-arcpy-.htm) para [ArcGIS](https://www.arcgis.com/), [PyQGIS](https://docs.qgis.org/testing/en/docs/pyqgis_developer_cookbook/) para [QGIS](https://www.qgis.org/) y [PyGRASS](https://grass.osgeo.org/grass84/manuals/libpython/pygrass_index.html) para [GRASS GIS](https://grass.osgeo.org/) (figura 2).
+Python ha ganado una gran importancia en el área del desarrollo de aplicaciones geoespaciales debido a su popularidad, "suavidad" de la curva de aprendizaje y abundancia de recursos de educación y consulta (ej. tutoriales, libros, listas de correo, foros de discusión). Todas estas son características que, entre otras, lo hacen muy apropiado para programadores que no son especialistas en ciencias de la computación, como es el caso de muchos de los usuarios de [sistemas de información geográfica (SIG)](https://es.wikipedia.org/wiki/Sistema_de_informaci%C3%B3n_geogr%C3%A1fica) y otros tipos de software geoespacial. De hecho, muchas de estas herramientas han seleccionado a [Python como el lenguaje de preferencia para que sus usuarios amplíen o configuren la funcionalidad que ofrecen](https://www.mdpi.com/2220-9964/2/1/201). Como ejemplos, pueden mencionarse las bibliotecas [ArcPy](https://pro.arcgis.com/en/pro-app/latest/arcpy/main/arcgis-pro-arcpy-reference.htm) para [ArcGIS](https://www.arcgis.com/), [PyQGIS](https://docs.qgis.org/testing/en/docs/pyqgis_developer_cookbook/) para [QGIS](https://www.qgis.org/) y [PyGRASS](https://grass.osgeo.org/grass84/manuals/libpython/pygrass_index.html) para [GRASS GIS](https://grass.osgeo.org/) (figura 2). Además, existen numerosas bibliotecas de Python independientes para el manejo de datos geoespaciales, como [GeoPandas](https://geopandas.org/) para datos vectoriales, [Rasterio](https://rasterio.readthedocs.io/) para datos raster, [Shapely](https://shapely.readthedocs.io/) para geometría computacional y [Folium](https://python-visualization.github.io/folium/) para visualización de mapas interactivos.
 
 <figure style="text-align: center;">
   <img
