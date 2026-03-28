@@ -17,6 +17,7 @@ project:
       children:
         - file: contenidos/ii-lenguaje-programacion-python/01-introduccion-python.md
         - file: contenidos/ii-lenguaje-programacion-python/02-lenguaje-python.ipynb
+        - file: contenidos/ii-lenguaje-programacion-python/03-api.ipynb
     - title: Evaluaciones
       children:
         - file: contenidos/evaluaciones/examen-corto-01.md
