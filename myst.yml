@@ -1,6 +1,7 @@
 # See docs at: https://mystmd.org/guide/frontmatter
 version: 1
 project:
+  github: tpb708-programacionsig/2026-i
   toc:
     - file: index.md
     - title: Información General
@@ -18,6 +19,11 @@ project:
         - file: contenidos/ii-lenguaje-programacion-python/01-introduccion-python.md
         - file: contenidos/ii-lenguaje-programacion-python/02-lenguaje-python.ipynb
         - file: contenidos/ii-lenguaje-programacion-python/03-api.ipynb
+    - title: "III. Análisis y visualización de datos"
+      children:
+        - file: contenidos/iii-analisis-visualizacion-datos/01-pandas.ipynb
+        - file: contenidos/iii-analisis-visualizacion-datos/02-matplotlib.ipynb
+        - file: contenidos/iii-analisis-visualizacion-datos/03-plotly.ipynb
     - title: Evaluaciones
       children:
         - file: contenidos/evaluaciones/examen-corto-01.md
