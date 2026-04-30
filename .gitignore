@@ -1,0 +1,8 @@
+# Exámenes aplicados a estudiantes (no publicar)
+examenes/
+
+# Salida de construcción de Jupyter Book (regenerada por GH Actions en cada deploy)
+_build/
+
+# Configuración local de Claude Code
+.claude/
