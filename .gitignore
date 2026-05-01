@@ -1,5 +1,6 @@
 # Exámenes aplicados a estudiantes (no publicar)
 examenes/
+examenes-ciclos-anteriores/
 
 # Salida de construcción de Jupyter Book (regenerada por GH Actions en cada deploy)
 _build/
