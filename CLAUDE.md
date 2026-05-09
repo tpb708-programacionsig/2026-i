@@ -18,10 +18,10 @@ conda create -n tpb708-programacionsig -c conda-forge --strict-channel-priority 
 conda activate tpb708-programacionsig
 mamba install -c conda-forge --strict-channel-priority python jupyter jupyter-book nodejs
 
-# Construir el sitio
-jupyter-book build .
+# Construir el sitio HTML estático
+jupyter-book build --html
 
-# Iniciar servidor de desarrollo local
+# Iniciar servidor de desarrollo local (puerto 3000; pasa a 3001 si está ocupado)
 jupyter-book start
 ```
 
