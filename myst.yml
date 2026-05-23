@@ -30,6 +30,7 @@ project:
         - file: contenidos/iv-procesamiento-datos-geoespaciales/02-geopandas.ipynb
         - file: contenidos/iv-procesamiento-datos-geoespaciales/03-ejemplo-analisis-riqueza-especies.ipynb
         - file: contenidos/iv-procesamiento-datos-geoespaciales/04-ejemplo-analisis-densidad-red-vial.ipynb
+        - file: contenidos/iv-procesamiento-datos-geoespaciales/05-rasterio.ipynb
     - title: Evaluaciones
       children:
         - file: contenidos/evaluaciones/examen-corto-01.md
