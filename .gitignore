@@ -7,3 +7,6 @@ _build/
 
 # Configuración local de Claude Code
 .claude/
+
+# Artefactos generados al ejecutar los cuadernos (no son fuente)
+contenidos/iv-procesamiento-datos-geoespaciales/ndvi_clases_gandoca.tif
