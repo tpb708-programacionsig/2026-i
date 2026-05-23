@@ -10,3 +10,6 @@ _build/
 
 # Artefactos generados al ejecutar los cuadernos (no son fuente)
 contenidos/iv-procesamiento-datos-geoespaciales/ndvi_clases_gandoca.tif
+
+# Sidecars PAM de GDAL (estadísticas/histogramas auxiliares)
+*.aux.xml
