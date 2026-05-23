@@ -31,6 +31,8 @@ project:
         - file: contenidos/iv-procesamiento-datos-geoespaciales/03-ejemplo-analisis-riqueza-especies.ipynb
         - file: contenidos/iv-procesamiento-datos-geoespaciales/04-ejemplo-analisis-densidad-red-vial.ipynb
         - file: contenidos/iv-procesamiento-datos-geoespaciales/05-rasterio.ipynb
+        - file: contenidos/iv-procesamiento-datos-geoespaciales/06-ejemplo-analisis-altitud-cantones.ipynb
+        - file: contenidos/iv-procesamiento-datos-geoespaciales/07-ejemplo-analisis-ndvi-gandoca.ipynb
     - title: Evaluaciones
       children:
         - file: contenidos/evaluaciones/examen-corto-01.md
