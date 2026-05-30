@@ -43,6 +43,7 @@ project:
         - file: contenidos/evaluaciones/examen-corto-03.md
         - file: contenidos/evaluaciones/tarea-02.md
         - file: contenidos/evaluaciones/examen-corto-04.md
+        - file: contenidos/evaluaciones/tarea-03.md
     - title: Software
       children:
         - file: contenidos/software/vscode.md
