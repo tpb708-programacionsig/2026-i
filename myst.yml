@@ -33,6 +33,8 @@ project:
         - file: contenidos/iv-procesamiento-datos-geoespaciales/05-rasterio.ipynb
         - file: contenidos/iv-procesamiento-datos-geoespaciales/06-ejemplo-analisis-altitud-cantones.ipynb
         - file: contenidos/iv-procesamiento-datos-geoespaciales/07-ejemplo-analisis-ndvi-gandoca.ipynb
+        - file: contenidos/iv-procesamiento-datos-geoespaciales/08-folium.ipynb
+        - file: contenidos/iv-procesamiento-datos-geoespaciales/09-leafmap.ipynb
     - title: Evaluaciones
       children:
         - file: contenidos/evaluaciones/examen-corto-01.md
