@@ -55,7 +55,7 @@ conda config --env --set channel_priority strict
 conda install -c conda-forge mamba
 
 # Instalación de módulos
-mamba install -c conda-forge python=3.12 pandas altair plotly geopandas leafmap streamlit streamlit-folium
+mamba install -c conda-forge python pandas altair plotly geopandas leafmap streamlit streamlit-folium
 
 # Desactivación del ambiente
 conda deactivate
