@@ -35,6 +35,9 @@ project:
         - file: contenidos/iv-procesamiento-datos-geoespaciales/07-ejemplo-analisis-ndvi-gandoca.ipynb
         - file: contenidos/iv-procesamiento-datos-geoespaciales/08-folium.ipynb
         - file: contenidos/iv-procesamiento-datos-geoespaciales/09-leafmap.ipynb
+    - title: "V. Análisis y visualización avanzados"
+      children:
+        - file: contenidos/v-analisis-visualizacion-avanzados/01-streamlit.md
     - title: Evaluaciones
       children:
         - file: contenidos/evaluaciones/examen-corto-01.md
