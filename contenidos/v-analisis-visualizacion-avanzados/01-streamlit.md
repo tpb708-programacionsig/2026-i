@@ -35,8 +35,8 @@ mamba install -c conda-forge streamlit
 Se recomienda crear un entorno virtual con Streamlit y otras bibliotecas requeridas. El siguiente bloque de código contiene los comandos necesarios para crear un ambiente conda para desarrollo de aplicaciones geoespaciales. Las bibliotecas [streamlit-folium](https://folium.streamlit.app/) y [leafmap](https://leafmap.org/) permiten incorporar mapas interactivos en las aplicaciones.
 
 ```shell
-# Actualización de Conda (opcional)
-conda update conda
+# Actualización de Conda (opcional, puede tomar varios minutos)
+# conda update conda
 
 # Creación del ambiente
 conda create -n streamlit
