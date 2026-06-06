@@ -33,7 +33,7 @@ La salida de la construcción se genera en `_build/html/`.
 
 ## Despliegue
 
-Automatizado mediante GitHub Actions (`.github/workflows/deploy.yml`). Los push a `main` ejecutan la construcción y el despliegue a GitHub Pages. Requiere Node.js 18.x.
+Automatizado mediante GitHub Actions (`.github/workflows/deploy.yml`). Los push a `main` ejecutan la construcción y el despliegue a GitHub Pages. Requiere Node.js 24.x.
 
 ## Estructura del contenido
 
