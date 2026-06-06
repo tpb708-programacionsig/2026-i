@@ -60,6 +60,60 @@ mamba install -c conda-forge python pandas altair plotly geopandas leafmap strea
 conda deactivate
 ```
 
+## Una primera aplicación: «Hola mundo»
+
+Para verificar que la instalación funciona y conocer el flujo básico de trabajo, en esta sección se desarrolla y ejecuta, paso a paso, una aplicación Streamlit muy sencilla.
+
+Se asume que está instalado el editor [Visual Studio Code (VS Code)](https://code.visualstudio.com/), que puede descargarse desde su sitio web en caso de ser necesario. Se recomienda tener instalada también la [extensión de Python para VS Code](https://marketplace.visualstudio.com/items?itemName=ms-python.python). Además, debe haberse creado el ambiente `streamlit` con la biblioteca Streamlit, tal como se indicó en la sección anterior.
+
+1. **Crear un directorio para la aplicación.** En la ubicación de su preferencia (por ejemplo, en el directorio del usuario), cree un directorio para el proyecto, llamado `hola-streamlit`. Puede crearlo con el explorador de archivos del sistema operativo o, desde una terminal, con el comando:
+
+    ```shell
+    mkdir hola-streamlit
+    ```
+
+2. **Abrir el directorio en VS Code.** En VS Code, seleccione **File > Open Folder** (Archivo > Abrir carpeta) y elija el directorio `hola-streamlit` recién creado.
+
+3. **Crear el archivo del programa.** Dentro del directorio, cree un archivo llamado `app.py`. En VS Code puede hacerlo con el botón **New File** (Nuevo archivo) del panel del explorador, o con el menú **File > New File**. La extensión `.py` indica que es un archivo de código fuente en Python.
+
+4. **Escribir el código de la aplicación.** Copie el siguiente código en el archivo `app.py`:
+
+    ```python
+    import streamlit as st
+
+    st.title("Hola mundo")
+    st.write("Esta es mi primera aplicación desarrollada con Streamlit.")
+
+    nombre = st.text_input("Escriba su nombre:")
+
+    if nombre:
+        st.write(f"¡Hola, {nombre}!")
+    ```
+
+    La función [`st.title()`](https://docs.streamlit.io/develop/api-reference/text/st.title) muestra un título, [`st.write()`](https://docs.streamlit.io/develop/api-reference/write-magic/st.write) muestra texto y [`st.text_input()`](https://docs.streamlit.io/develop/api-reference/widgets/st.text_input) crea una casilla de texto que el usuario puede completar de forma interactiva.
+
+5. **Guardar el archivo.** Guarde los cambios con `Ctrl + S` (en macOS, `Cmd + S`).
+
+6. **Abrir una terminal con conda habilitado.** Abra la terminal integrada de VS Code con **Terminal > New Terminal** (Terminal > Nueva terminal). En **Windows**, asegúrese de que la terminal tenga conda habilitado; si no, use **Anaconda Prompt** y, desde ahí, ingrese al directorio del proyecto con `cd hola-streamlit`.
+
+7. **Activar el ambiente.** En la terminal, active el ambiente creado en la sección anterior:
+
+    ```shell
+    conda activate streamlit
+    ```
+
+8. **Ejecutar la aplicación.** Desde el directorio del proyecto, ejecute:
+
+    ```shell
+    streamlit run app.py
+    ```
+
+    Este comando inicia un servidor web de desarrollo y abre la aplicación en el navegador, normalmente en la dirección [http://localhost:8501](http://localhost:8501). Escriba su nombre en la casilla de texto para ver cómo la aplicación responde de forma interactiva.
+
+9. **Detener la aplicación.** Para detener el servidor, regrese a la terminal y presione `Ctrl + C`.
+
+Mientras la aplicación está en ejecución, cada vez que guarde cambios en `app.py`, Streamlit detecta la modificación y ofrece volver a ejecutar la aplicación para reflejar los cambios.
+
 ## Aplicaciones de ejemplo
 
 Se proporciona el código fuente de dos aplicaciones Streamlit de ejemplo en repositorios de la organización del curso en GitHub.
