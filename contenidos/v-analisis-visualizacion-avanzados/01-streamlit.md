@@ -114,6 +114,35 @@ Se asume que está instalado el editor [Visual Studio Code (VS Code)](https://co
 
 Mientras la aplicación está en ejecución, cada vez que guarde cambios en `app.py`, Streamlit detecta la modificación y ofrece volver a ejecutar la aplicación para reflejar los cambios.
 
+## Publicación en Streamlit Cloud
+
+[Streamlit Cloud](https://streamlit.io/cloud) permite publicar una aplicación en internet de forma gratuita, a partir del código alojado en un repositorio de [GitHub](https://github.com/). A continuación se explica, paso a paso, cómo publicar la aplicación «Hola mundo» creada en la sección anterior.
+
+1. **Crear el archivo `requirements.txt`.** En el directorio de la aplicación (`hola-streamlit`), cree un archivo llamado `requirements.txt` con la lista de las bibliotecas que utiliza la aplicación. Streamlit Cloud lo usa para instalar las dependencias necesarias. Para la aplicación «Hola mundo» basta con una línea:
+
+    ```
+    streamlit
+    ```
+
+    En aplicaciones más complejas se agregan las demás bibliotecas, una por línea (por ejemplo, `pandas`, `plotly`, `geopandas`, `folium`, `streamlit-folium`).
+
+2. **Subir la aplicación a un repositorio de GitHub.** Streamlit Cloud publica la aplicación a partir del código alojado en GitHub. Si no tiene una cuenta, créela de forma gratuita en [github.com](https://github.com/). Luego:
+
+    - Cree un repositorio nuevo (por ejemplo, `hola-streamlit`).
+    - Agregue al repositorio los archivos `app.py` y `requirements.txt`. Puede hacerlo desde la interfaz web de GitHub con la opción **Add file > Upload files**, o mediante git si está familiarizado con su uso.
+
+3. **Configurar Streamlit Cloud por primera vez.** Ingrese a [Streamlit Cloud](https://streamlit.io/cloud) y seleccione **Continue with GitHub** para iniciar sesión con su cuenta de GitHub. La primera vez, GitHub solicitará autorizar a Streamlit Community Cloud para acceder a sus repositorios; acepte para continuar.
+
+4. **Publicar la aplicación.** En el panel de Streamlit Cloud, haga clic en **Create app** (o **New app**) y seleccione la opción para publicar una aplicación a partir de un repositorio existente. Indique:
+
+    - el **repositorio** de GitHub (por ejemplo, `su-usuario/hola-streamlit`),
+    - la **rama** (normalmente `main`),
+    - el **archivo principal** (`app.py`).
+
+    Haga clic en **Deploy**. Streamlit Cloud instalará las bibliotecas indicadas en `requirements.txt` y ejecutará la aplicación. Después de unos instantes, la aplicación quedará disponible en una dirección pública con el formato `https://<nombre>.streamlit.app`, que puede compartir con cualquier persona.
+
+5. **Actualizar la aplicación.** Cada vez que suba cambios al repositorio de GitHub, Streamlit Cloud vuelve a publicar la aplicación automáticamente con la nueva versión.
+
 ## Aplicaciones de ejemplo
 
 Se proporciona el código fuente de dos aplicaciones Streamlit de ejemplo en repositorios de la organización del curso en GitHub.
@@ -126,36 +155,7 @@ La segunda muestra registros de presencia de felinos (*Felidae*) de Costa Rica, 
 
 [https://github.com/tpb708-programacionsig/2026-i-app-geoespacial](https://github.com/tpb708-programacionsig/2026-i-app-geoespacial)
 
-Esta segunda aplicación sirve como base para el desarrollo de aplicaciones interactivas que combinan tablas, gráficos y mapas.
-
-### Ejecución en la computadora local
-
-Para ejecutar una aplicación en su computadora, clone o descargue el repositorio con el código fuente y, desde la línea de comandos del sistema operativo, ingrese al directorio y ejecute:
-
-```bash
-# Ejecución de la aplicación Streamlit
-streamlit run app.py
-```
-
-Este comando inicializa un servidor web de desarrollo y abre la aplicación Streamlit.
-
-### Publicación en Streamlit Cloud
-
-Para publicar una aplicación en Streamlit Cloud, primero debe crear un archivo llamado `requirements.txt` con la lista de las bibliotecas que usa la aplicación. Por ejemplo:
-
-```
-streamlit
-pandas
-plotly
-geopandas
-folium
-streamlit-folium
-branca
-```
-
-Luego, debe incluir la aplicación, y los archivos asociados (ej. datos locales), en un repositorio en GitHub.
-
-Por último, debe ingresar a [Streamlit Cloud](https://streamlit.io/cloud) y crear una cuenta gratuita (puede usar su cuenta de GitHub). Ahí debe seleccionar el repositorio de GitHub en el que se encuentra la aplicación y publicarla.
+Esta segunda aplicación sirve como base para el desarrollo de aplicaciones interactivas que combinan tablas, gráficos y mapas. Cada repositorio puede ejecutarse en la computadora local siguiendo los pasos de la sección «Una primera aplicación: "Hola mundo"», y publicarse en Streamlit Cloud como se explicó en la sección anterior.
 
 ## Otros recursos
 
