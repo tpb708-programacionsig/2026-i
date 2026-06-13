@@ -157,6 +157,113 @@ La segunda muestra registros de presencia de felinos (*Felidae*) de Costa Rica, 
 
 Esta segunda aplicación sirve como base para el desarrollo de aplicaciones interactivas que combinan tablas, gráficos y mapas. Cada repositorio puede ejecutarse en la computadora local siguiendo los pasos de la sección «Una primera aplicación: "Hola mundo"», y publicarse en Streamlit Cloud como se explicó en la sección anterior.
 
+## De la Tarea 3 a una aplicación
+
+En esta sección se explica cómo trasladar a una aplicación Streamlit los tres productos elaborados en la [Tarea 3](../evaluaciones/tarea-03.md) —una **tabla**, un **gráfico** y un **mapa**— y cómo agregar un **filtro** que permita al usuario explorar los datos de forma interactiva. Estos son, precisamente, los elementos requeridos en el [proyecto final](../evaluaciones/proyecto-final.md) del curso. Como referencia completa puede consultarse la aplicación de ejemplo [2026-i-app-geoespacial](https://github.com/tpb708-programacionsig/2026-i-app-geoespacial), de la que se toman los fragmentos de código que siguen.
+
+### El modelo de ejecución de Streamlit
+
+Para comprender cómo funcionan los filtros conviene conocer el modelo de ejecución de Streamlit: **cada vez que el usuario interactúa con la aplicación** (por ejemplo, al elegir una opción en un control), Streamlit **vuelve a ejecutar todo el archivo `app.py` de principio a fin**. Los controles (*widgets*) retornan su valor actual, de modo que el código puede usar ese valor para decidir qué datos mostrar.
+
+Como los datos se cargan en cada ejecución, conviene evitar que se descarguen o se lean repetidamente. El decorador [`@st.cache_data`](https://docs.streamlit.io/develop/api-reference/caching-and-state/st.cache_data) almacena en caché el resultado de una función de carga, de manera que los datos se leen una sola vez:
+
+```python
+import streamlit as st
+import pandas as pd
+
+@st.cache_data
+def cargar_datos():
+    return pd.read_csv("datos.csv")
+
+datos = cargar_datos()
+```
+
+### Mostrar una tabla
+
+La función [`st.dataframe()`](https://docs.streamlit.io/develop/api-reference/data/st.dataframe) muestra un *data frame* de pandas como una tabla interactiva (el usuario puede ordenar las columnas y desplazarse por las filas). Para una tabla estática puede usarse [`st.table()`](https://docs.streamlit.io/develop/api-reference/data/st.table).
+
+```python
+st.dataframe(datos, use_container_width=True, hide_index=True)
+```
+
+### Mostrar un gráfico
+
+Un gráfico de **plotly** se muestra con la función [`st.plotly_chart()`](https://docs.streamlit.io/develop/api-reference/charts/st.plotly_chart):
+
+```python
+import plotly.express as px
+
+grafico = px.bar(
+    conteo,
+    x="cantidad",
+    y="categoria",
+    orientation="h",
+    labels={"cantidad": "Cantidad de registros", "categoria": "Categoría"}
+)
+st.plotly_chart(grafico, use_container_width=True)
+```
+
+Si elaboró el gráfico con **matplotlib**, se muestra con la función [`st.pyplot()`](https://docs.streamlit.io/develop/api-reference/charts/st.pyplot), a la que se le pasa la figura:
+
+```python
+import matplotlib.pyplot as plt
+
+fig, ax = plt.subplots()
+ax.bar(categorias, valores)
+st.pyplot(fig)
+```
+
+### Mostrar un mapa
+
+Los mapas de **folium** se integran en una aplicación Streamlit mediante la biblioteca [streamlit-folium](https://folium.streamlit.app/) y su función [`st_folium()`](https://folium.streamlit.app/), que recibe el objeto del mapa:
+
+```python
+import folium
+from streamlit_folium import st_folium
+
+mapa = folium.Map(location=[9.8, -84.0], zoom_start=7, tiles="CartoDB positron")
+
+# Aquí se agregan al mapa las capas (marcadores, GeoJson, coropletas, etc.),
+# tal como se hizo en el capítulo de folium.
+
+st_folium(mapa, use_container_width=True, height=600)
+```
+
+La biblioteca `streamlit-folium` debe agregarse al archivo `requirements.txt`. Si elaboró el mapa con **leafmap**, utilice su módulo `leafmap.foliumap` y el método `to_streamlit()` del mapa para mostrarlo en la aplicación.
+
+### Agregar un filtro
+
+Un filtro se crea con un control que retorna el valor elegido por el usuario. La función [`st.selectbox()`](https://docs.streamlit.io/develop/api-reference/widgets/st.selectbox) crea una lista desplegable de selección única; otras opciones son [`st.multiselect()`](https://docs.streamlit.io/develop/api-reference/widgets/st.multiselect) (selección múltiple), [`st.slider()`](https://docs.streamlit.io/develop/api-reference/widgets/st.slider) (rango numérico) y [`st.radio()`](https://docs.streamlit.io/develop/api-reference/widgets/st.radio) (botones de opción). Los controles pueden ubicarse en la barra lateral con [`st.sidebar`](https://docs.streamlit.io/develop/api-reference/layout/st.sidebar).
+
+En el siguiente ejemplo, el usuario elige una categoría y el *data frame* se filtra según esa elección:
+
+```python
+categorias = sorted(datos["categoria"].unique())
+seleccion = st.sidebar.selectbox(
+    "Categoría", options=["(Todas)"] + categorias
+)
+
+if seleccion == "(Todas)":
+    datos_filtrados = datos
+else:
+    datos_filtrados = datos[datos["categoria"] == seleccion]
+```
+
+La clave está en **construir la tabla, el gráfico y el mapa a partir del *data frame* filtrado** (`datos_filtrados`) y no del original. Como Streamlit vuelve a ejecutar todo el archivo cada vez que cambia el control, los tres elementos se actualizan automáticamente con la selección del usuario.
+
+### Estructura general de la aplicación
+
+Reuniendo las piezas anteriores, la estructura de una aplicación de datos geoespaciales suele ser la siguiente:
+
+1. Importar las bibliotecas.
+2. Definir las funciones de carga de datos con `@st.cache_data`.
+3. Configurar la página (`st.set_page_config()`), el título (`st.title()`) y el texto introductorio (`st.markdown()`).
+4. Cargar los datos.
+5. Crear el filtro y obtener el *data frame* filtrado.
+6. Mostrar la tabla, el gráfico y el mapa a partir de los datos filtrados.
+
+Esta es exactamente la estructura de la aplicación de ejemplo [2026-i-app-geoespacial](https://github.com/tpb708-programacionsig/2026-i-app-geoespacial) y la que se solicita en el [proyecto final](../evaluaciones/proyecto-final.md).
+
 ## Otros recursos
 
 - [Sitio principal](https://streamlit.io/)
