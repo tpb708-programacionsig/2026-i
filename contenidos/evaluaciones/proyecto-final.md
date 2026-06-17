@@ -21,6 +21,21 @@ La entrega debe realizarse a través de la plataforma Mediación Virtual de la U
 
 La aplicación debe estar **en funcionamiento** en Streamlit Cloud al momento de la entrega.
 
+## Presentación
+
+El día de la entrega se realizará una **sesión virtual** en la que cada estudiante presentará su aplicación al resto del grupo.
+
+Lineamientos de la presentación:
+
+- Cada exposición tendrá una duración **máxima de 10 minutos**, más **2 minutos** para preguntas y comentarios.
+- Como son 13 estudiantes, es importante **respetar el tiempo asignado** para que todas las presentaciones quepan en la sesión.
+- La presentación debe hacerse mostrando la **aplicación en funcionamiento** desde su URL pública en Streamlit Cloud (no se requiere una presentación de diapositivas).
+- Durante la exposición se sugiere:
+  - Describir brevemente el **tema, los datos y su fuente**.
+  - Mostrar y explicar la **tabla**, el **gráfico** y el **mapa** de la aplicación.
+  - Demostrar el funcionamiento del **filtro interactivo** y cómo actualiza el contenido.
+- Se valorarán la **claridad** de la exposición, el **dominio** del contenido y el **manejo del tiempo**.
+
 ## Consideraciones adicionales
 
 **Este proyecto es estrictamente individual.**
@@ -53,7 +68,8 @@ Entre paréntesis, se muestra el porcentaje correspondiente a cada aspecto que s
 - (15 %) Gráfico estadístico integrado correctamente.
 - (25 %) Mapa interactivo integrado correctamente.
 - (15 %) Filtro interactivo funcional que actualiza el contenido mostrado.
-- (20 %) Publicación correcta: repositorio público en GitHub y aplicación en funcionamiento en Streamlit Cloud.
+- (10 %) Presentación de la aplicación en la sesión virtual.
+- (10 %) Publicación correcta: repositorio público en GitHub y aplicación en funcionamiento en Streamlit Cloud.
 
 ## Cómo desarrollar la aplicación
 
